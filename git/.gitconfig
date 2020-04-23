@@ -1,0 +1,21 @@
+[user]
+	name = Moises Gonzalez
+	email = mgondev@gmail.com
+[core]
+	editor = vim
+[alias]
+	graph = log --graph --oneline --decorate
+	sp = ! git stash -u && git pull && git stash pop
+	l = log
+	d = diff
+	a = add
+	aa = add --all
+	c = commit
+	s = switch
+	m = merge
+	p = push
+	pp = pull
+[status]
+	submoduleSummary = true
+[diff]
+	submodule = log
