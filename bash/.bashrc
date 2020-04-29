@@ -4,7 +4,7 @@
 [[ $- != *i* ]] && return
 
 source ~/.local/prompts/git-prompt.sh
-source ${HOME}/.bash/functions.sh
+source $(dirname "$0")/.bash/functions.sh
 
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
@@ -76,6 +76,8 @@ shopt -s direxpand
 shopt -s dirspell
 
 shopt -s extglob
+
+set-volume 140%
 
 source ${HOME}/.bash/aliases.sh
 source ${HOME}/.bash/vars.sh
