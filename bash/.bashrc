@@ -79,3 +79,5 @@ shopt -s extglob
 
 source ${HOME}/.bash/aliases.sh
 source ${HOME}/.bash/vars.sh
+
+neofetch
