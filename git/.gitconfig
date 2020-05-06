@@ -7,11 +7,13 @@
 	graph = log --graph --oneline --decorate
 	sp = ! git stash -u && git pull && git stash pop
 	l = log
+	lo = log --oneline
 	d = diff
 	a = add
 	aa = add --all
 	c = commit
 	s = switch
+	st = status
 	m = merge
 	p = push
 	pp = pull
