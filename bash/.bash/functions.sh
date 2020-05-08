@@ -25,7 +25,7 @@ ex ()
 # new_record - add new record to /etc/hosts
 #   Useful to use with docker with nginx proxy
 #   service
-# usage: ex <record>
+# usage: new_record <record>
 new_record() {
   local root="${1}.local"
   local mail="mail.${1}.local"
@@ -40,4 +40,29 @@ new_record() {
 # usage: view <image path>
 view() {
   xdg-open ${1} > /dev/null 2>&1 &
+}
+
+# Download packages from AUR
+# usage: aur <package name>
+aur() { 
+  curl -O https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz \
+  && tar -xvf $1.tar.gz \
+  && cd $1 \
+  && makepkg --noconfirm -si \
+  && cd .. \
+  && rm -rf $1 $1.tar.gz 
+}
+
+# Gen a password from /dev/urandom 
+# usage: pwgen <password lenght>
+pwgen() { 
+  < /dev/urandom tr -dc '[:graph:]' | head -c"$1" ; echo
+}
+
+# Download audios from YouTube in given format (Default opus). Change extension to ".ogg" for Android.
+# usage: youadio <url> [format]
+youaudio() {
+ 	local format="${2:-opus}"
+  youtube-dl -x --audio-format ${format} --audio-quality 0 $1 \
+  && mv -v *.${format} ${HOME}/Music
 }

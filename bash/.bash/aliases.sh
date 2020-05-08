@@ -23,3 +23,4 @@ alias pdc="docker-compose -f ${HOME}/src/containers/docker-compose.yaml"
 alias ruby='ruby -w'
 alias set-volume='pactl -- set-sink-volume 0'
 alias smem='smem -t -k -P'
+alias rspace='for f in *\ *; do mv "$f" "${f// /_}"; done' # Remove spaces of files in actually directory
