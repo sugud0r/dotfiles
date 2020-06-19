@@ -17,7 +17,13 @@
 	m = merge
 	p = push
 	pp = pull
+	r = rebase
 [status]
 	submoduleSummary = true
 [diff]
 	submodule = log
+[credential]
+	helper = cache
+[sendemail]
+  smtpserver = /usr/bin/sendmail
+  smtpserveroption = -S mail:1025

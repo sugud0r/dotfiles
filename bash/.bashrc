@@ -5,6 +5,7 @@
 
 source ~/.local/prompts/git-prompt.sh
 source ${HOME}/.bash/functions.sh
+source /usr/share/git/completion/git-completion.bash
 
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
