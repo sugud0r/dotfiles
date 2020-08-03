@@ -16,6 +16,7 @@ alias more=less
 alias mv='mv -iv'
 alias rm='rm -Iv'
 alias du='du -sh'
+alias stow="stow -v --target=$HOME"
 
 # miscellaneous
 alias p='sudo pacman'
@@ -25,6 +26,13 @@ alias ruby='ruby -w'
 alias set-volume='pactl -- set-sink-volume 0'
 alias smem='smem -t -k -P'
 alias rspace='for f in *; do mv "$f" "${f// /_}"; done' # Remove spaces of files in actually directory
+alias clipboard='xclip -sel cli'
 
 # fzf
 alias se='vim -p $(fzf --height 40% --reverse -m)'
+
+# Alias Neovim to vim when is installed
+if command -v nvim 2>&1 >/dev/null
+then
+  alias vim='nvim'
+fi

@@ -1,6 +1,7 @@
 [user]
 	name = Moises Gonzalez
 	email = mgondev@gmail.com
+  signingkey = 90FDFE146A58C953EFC09C55BDBAC285E6C2C540
 [core]
 	editor = vim
 [alias]
@@ -27,3 +28,5 @@
 [sendemail]
   smtpserver = /usr/bin/sendmail
   smtpserveroption = -S mail:1025
+[commit]
+	gpgsign = true

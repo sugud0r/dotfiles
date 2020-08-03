@@ -80,5 +80,13 @@ shopt -s extglob
 
 source ${HOME}/.bash/aliases.sh
 source ${HOME}/.bash/vars.sh
+source ${HOME}/.bash/remap.sh
 
-neofetch
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+if command -v direnv 2>&1 >/dev/null
+then
+  eval "$(direnv hook bash)"
+fi
